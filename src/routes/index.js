@@ -8,11 +8,8 @@ import { transactionsSchema } from '../schemas/transactionSchema.js';
 
 const router = Router();
 
-// Rotas de Autenticação
 router.post('/sign-up', validateSchema(signUpSchema), signUp);
 router.post('/sign-in', validateSchema(signInSchema), signIn);
-
-// Rotas de Transações
 router.post('/transactions', authMiddleware, validateSchema(transactionsSchema), addTransaction);
 router.get('/transactions', authMiddleware, getTransactions);
 router.put('/transactions/:id', authMiddleware, validateSchema(transactionsSchema), updateTransaction);

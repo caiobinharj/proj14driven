@@ -27,11 +27,9 @@ export async function signUp(req, res) {
     }
 }
 
-// ...
 export async function signIn(req, res) {
     const { email, password } = req.body;
     const db = getDb();
-// ...
 
     try {
         const user = await db.collection('users').findOne({ email });
