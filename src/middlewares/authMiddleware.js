@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { getDb } from '../database/mongo.js';
+import { ObjectId } from "mongodb";
 
 export async function authMiddleware(req, res, next) {
     const { authorization } = req.headers;

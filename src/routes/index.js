@@ -6,6 +6,7 @@ import { authMiddleware } from '../middlewares/authMiddleware.js';
 import { signUpSchema, signInSchema } from '../schemas/authSchema.js';
 import { transactionsSchema } from '../schemas/transactionSchema.js';
 
+
 const router = Router();
 
 router.post('/sign-up', validateSchema(signUpSchema), signUp);

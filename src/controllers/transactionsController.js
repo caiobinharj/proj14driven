@@ -1,5 +1,5 @@
 import { getDb } from '../database/mongo.js';
-import { ObjectId } from 'mongodb';
+import { ObjectId } from "mongodb";
 
 export async function addTransaction(req, res) {
     const { value, description, type } = req.body;

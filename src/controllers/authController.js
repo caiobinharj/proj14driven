@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { getDb } from '../database/mongo.js';
 
+
 export async function signUp(req, res) {
     const { name, email, password } = req.body;
     const db = getDb();
